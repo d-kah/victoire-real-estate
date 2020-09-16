@@ -1,5 +1,5 @@
 <template>
-  <div class="relative z-10 lg:overlap-30vh">
+  <div class="relative lg:overlap-30vh">
 
     <div class="container mx-auto">
 
@@ -28,7 +28,7 @@
         </div>
         <div class="w-full lg:w-1/2">
           <!-- CardSm -->
-          <div class="relative">
+          <div class="relative bg-gold lg:bg-transparent-important">
             <div class="flex flex-col md:flex-row">
               <div class="w-full lg:w-1/2 overlap-1">
                 <div class="w-full bg-white md:border-r border-color-card cardSm hidden lg:block">
@@ -60,37 +60,32 @@
     </div>
 
     <div class="flex md:justify-end">
-      <div
-        class="w-full lg:w-1/2 bg-gold col-start-2 relative"
-      >
-        <div class="my-40 lg:my-32 xl:my-48 px-20">
-          <h4
-            class="text-white mb-6"
-            style="font-size:2.8rem;font-weight:600;"
-          >Nos services immobiliers</h4>
+      <div class="w-full lg:w-1/2 bg-gold col-start-2 relative">
+        <div class="my-40 lg:my-32 xl:my-48 px-10 lg:px-20">
+          <h4 class="bg-text text-white mb-6">Nos services immobiliers</h4>
           <div class="flex flex-wrap ">
             <nuxt-link
               class="uppercase mr-5 mb-5 bg-white text-indigo-900 hover:bg-red-700 font-medium py-2 px-3"
               to="/"
-              >
+            >
               vente
             </nuxt-link>
             <nuxt-link
               class="uppercase mr-5 mb-5 bg-white text-indigo-900 hover:bg-red-700 font-medium py-2 px-3"
               to="/"
-              >
+            >
               location
             </nuxt-link>
             <nuxt-link
               class="whitespace-no-wrap uppercase mr-5 mb-5 bg-white text-indigo-900 hover:bg-red-700 font-medium py-2 px-3"
               to="/"
-              >
+            >
               Expertise & conseils
             </nuxt-link>
             <nuxt-link
               class="whitespace-no-wrap uppercase mr-5 mb-5 bg-white text-indigo-900 hover:bg-red-700 font-medium py-2 px-3"
               to="/"
-              >
+            >
               Recherche de biens
             </nuxt-link>
           </div>
@@ -103,6 +98,9 @@
 
 <script>
 export default {
+  mounted() {
+    console.log("leftSticky", this.realEstates);
+  },
   props: ["realEstates"],
 };
 </script>

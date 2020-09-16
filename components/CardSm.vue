@@ -6,7 +6,7 @@
     <div>
       <div
         class="relative w-full"
-        style="padding-top:66.66%;"
+        :style="`padding-top:${aspectRatio}`"
       >
         <div class="absolute top-0 left-0 right-0 bottom-0">
           <div
@@ -18,7 +18,7 @@
     </div>
 
     <div class="px-4">
-      <div class="my-8">
+      <div class="mt-8 mb-4">
         <h4
           style="font-size: 1.8rem;"
           class="font-2"
@@ -29,7 +29,7 @@
         >{{realEstate.location}}</h4>
       </div>
 
-      <div>—</div>
+      <div class="mb-3">—</div>
 
       <ul>
         <li class="estate-list__price">À partir de {{realEstate.price}} €</li>
@@ -43,10 +43,21 @@
 
 <script>
 export default {
-  mounted() {
-    console.log(this.realEstate);
-  },
   props: ["realEstate"],
+  computed: {
+    aspectRatio() {
+      switch (this.realEstate.imageAspectRatio) {
+        case "4:3":
+          return "75%";
+        case "3:2":
+          return "66.66%";
+        case "8:5":
+          return "62.5%";
+        default:
+          return "100%";
+      }
+    },
+  },
 };
 </script>
 

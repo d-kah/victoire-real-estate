@@ -1,4 +1,4 @@
-# spade-project
+# victoire-project
 
 ## Build Setup
 

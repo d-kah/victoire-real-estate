@@ -9,7 +9,7 @@
     >Une équipe d'experts à votre écoute</h3>
 
     <div class="mb-12 px-8">
-      <p class="column-gap-1 column-count-2">
+      <p class="column-gap-1 md:column-count-2">
         Notre équipe de 34 spécialistes hautement qualifiés — tous diplômés, agréés IPI et polyglottes — se tient à votre disposition et à votre écoute. Toutes les collaborations réussies commencent par une simple rencontre. Alors : voyons-nous, et discutons de votre projet.
       </p>
     </div>
